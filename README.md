@@ -175,6 +175,7 @@ Resultados consolidados obtidos na base de teste:
 | **Acurácia Geral** | — | — | **77%** |
 | **ROC-AUC Score** | — | — | **0.8537** |
 
+![Matriz de Confusão](matriz_confusao.png)
 <img width="1242" height="929" alt="matriz_confusao" src="https://github.com/user-attachments/assets/c22420ce-4657-4401-92b3-cfdab701c31d" />
 
 > **Análise da Matriz de Confusão:**
