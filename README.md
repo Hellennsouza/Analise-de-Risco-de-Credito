@@ -181,7 +181,11 @@ Resultados consolidados obtidos na base de teste:
 | **Acurácia Geral** | — | — | **77%** |
 | **ROC-AUC Score** | — | — | **0.8537** |
 
+<img width="1242" height="929" alt="matriz_confusao" src="https://github.com/user-attachments/assets/c22420ce-4657-4401-92b3-cfdab701c31d" />
+
 * **Interpretação da ROC-AUC (0.8537):** O valor superior a 0.85 demonstra excelente capacidade do modelo de distinguir quem paga em dia de quem entra em atraso.
+
+<img width="1277" height="929" alt="curva_roc" src="https://github.com/user-attachments/assets/fbb04700-b284-46ca-93d0-533caa2f95a6" />
 
 
 ---
@@ -189,6 +193,9 @@ Resultados consolidados obtidos na base de teste:
 ### **4\. Ranking de Variáveis de Risco (Feature Importance)**
 
 Peso de cada indicador determinado pelo algoritmo:
+
+<img width="1582" height="855" alt="importancia_variaveis" src="https://github.com/user-attachments/assets/d027aa57-efcb-4f59-8186-ab7af3bacf74" />
+
 
 * **Score de Crédito (36,04%):** É o preditor de maior relevância; resume o comportamento histórico de quitação de dívidas.  
     
