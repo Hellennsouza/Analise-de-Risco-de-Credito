@@ -9,7 +9,7 @@ Identificar clientes propensos ao default antes do vencimento das operações, p
 
 ## 📁 Estrutura do Repositório
 
- ```text
+```text
 credit-default-analytics/
 ├── data/
 │   └── credit_data.csv          # Base tratada
@@ -19,3 +19,4 @@ credit-default-analytics/
 │   └── utils.py                 # Funções auxiliares
 ├── requirements.txt
 └── README.md                    # Apresentação executiva
+```
