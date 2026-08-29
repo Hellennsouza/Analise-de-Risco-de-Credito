@@ -182,10 +182,24 @@ Resultados consolidados obtidos na base de teste:
 | **ROC-AUC Score** | — | — | **0.8537** |
 
 <img width="1242" height="929" alt="matriz_confusao" src="https://github.com/user-attachments/assets/c22420ce-4657-4401-92b3-cfdab701c31d" />
+> **Análise da Matriz de Confusão:**
+> A matriz de confusão acima detalha as previsões do modelo no conjunto de teste (375 clientes):
+> *   **Verdadeiros Negativos (Adimplentes Corretos):** O modelo classificou corretamente **249 de 283** clientes adimplentes (Recall de **88%** para a Classe 0). Isso indica que a esteira de crédito do modelo é eficiente para aprovar bons pagadores com segurança.
+> *   **Falsos Positivos (Alarme Falso):** Apenas **34** adimplentes foram classificados incorretamente como inadimplentes (rejeição injusta ou custo de oportunidade de concessão).
+> *   **Verdadeiros Positivos (Inadimplentes Identificados):** O modelo identificou corretamente **40 de 92** inadimplentes reais (Recall de **43%** para a Classe 1) .
+> *   **Falsos Negativos (O Erro mais Caro):** O modelo deixou passar **52** inadimplentes reais como se fossem bons pagadores . 
+> 
+> **Direcionamento de Negócio:** Em risco de crédito, os *Falsos Negivos* representam perdas financeiras diretas (inadimplência na carteira). O atual resultado (Recall de 43% para inadimplentes) mostra que, embora o modelo tenha boa acurácia geral (77%), há espaço para refinar o ponto de corte (*cut-off*) ou aplicar técnicas de balanceamento de classes (como pesos de classe ou SMOTE) para priorizar a captura dessas perdas potenciais.
 
 * **Interpretação da ROC-AUC (0.8537):** O valor superior a 0.85 demonstra excelente capacidade do modelo de distinguir quem paga em dia de quem entra em atraso.
 
 <img width="1277" height="929" alt="curva_roc" src="https://github.com/user-attachments/assets/fbb04700-b284-46ca-93d0-533caa2f95a6" />
+> **Análise da Curva ROC-AUC:**
+> A Curva ROC (Receiver Operating Characteristic) mede a capacidade de discriminação do modelo. Com uma métrica de **AUC (Área Sob a Curva) de 0.8537**, o algoritmo Random Forest apresenta um **excelente poder de separabilidade** estatística.
+> *   **O que o AUC representa:** Significa que há **85,37% de probabilidade** de o modelo classificar um cliente inadimplente escolhido aleatoriamente com um score de risco maior do que um cliente adimplente escolhido aleatoriamente.
+> *   **Trade-off do Threshold (0.50):** O ponto azul no gráfico representa o limite de classificação padrão de 50%. Nele, atingimos uma taxa de falsos positivos de apenas 12%, mas a taxa de verdadeiros positivos (sensibilidade) é de 43%.
+> 
+> **Direcionamento de Negócio:** A robustez da curva ROC indica que o score gerado pelo modelo é altamente confiável. Para uso em produção, o comitê de crédito pode diminuir o threshold de decisão (ex: para 30%) se o objetivo for uma postura mais conservadora de proteção contra calotes, ou aumentá-lo se a prioridade for a expansão agressiva da carteira.
 
 
 ---
@@ -195,7 +209,13 @@ Resultados consolidados obtidos na base de teste:
 Peso de cada indicador determinado pelo algoritmo:
 
 <img width="1582" height="855" alt="importancia_variaveis" src="https://github.com/user-attachments/assets/d027aa57-efcb-4f59-8186-ab7af3bacf74" />
-
+> **Análise de Feature Importance (Importância das Variáveis):**
+> O peso atribuído pelo modelo Random Forest a cada indicador de risco reflete a lógica econômica implementada na simulação:
+> 1.  **Score de Crédito (36,04%):** Lidera como o fator mais determinante para a previsão de default. Historicamente, pontuações de birôs resumem o comportamento de longo prazo do consumidor e servem como âncora de risco.
+> 2.  **Taxa de Utilização do Limite (21,61%):** O segundo indicador de maior peso. No mercado de crédito, clientes que operam no teto do seu limite concedido indicam dependência iminente de rotativo, aumentando drasticamente o risco de default no curto prazo.
+> 3.  **Renda Mensal (16,84%):** Representa a robustez e a capacidade financeira do tomador para absorver oscilações e imprevistos de caixa.
+> 4.  **Idade (14,30%):** Atua como proxy de estabilidade profissional e maturidade financeira de consumo.
+> 5.  **Dias de Atraso Histórico (11,22%):** Embora seja a menor importância relativa no modelo global, indica a pontualidade recente do cliente frente aos compromissos contratuais.
 
 * **Score de Crédito (36,04%):** É o preditor de maior relevância; resume o comportamento histórico de quitação de dívidas.  
     
