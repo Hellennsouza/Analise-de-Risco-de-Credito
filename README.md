@@ -8,7 +8,8 @@ Projeto voltado à previsão de inadimplência e identificação de padrões de 
 Identificar clientes propensos ao default antes do vencimento das operações, permitindo ações proativas de renegociação e otimização de provisão para créditos de liquidação duvidosa (PDD).
 
 ## 📁 Estrutura do Repositório
-```text
+
+ ```text
 credit-default-analytics/
 ├── data/
 │   └── credit_data.csv          # Base tratada
