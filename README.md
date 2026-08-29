@@ -182,7 +182,9 @@ Resultados consolidados obtidos na base de teste:
 | **ROC-AUC Score** | — | — | **0.8537** |
 
 <img width="1242" height="929" alt="matriz_confusao" src="https://github.com/user-attachments/assets/c22420ce-4657-4401-92b3-cfdab701c31d" />
+> 
 > **Análise da Matriz de Confusão:**
+> 
 > A matriz de confusão acima detalha as previsões do modelo no conjunto de teste (375 clientes):
 > *   **Verdadeiros Negativos (Adimplentes Corretos):** O modelo classificou corretamente **249 de 283** clientes adimplentes (Recall de **88%** para a Classe 0). Isso indica que a esteira de crédito do modelo é eficiente para aprovar bons pagadores com segurança.
 > *   **Falsos Positivos (Alarme Falso):** Apenas **34** adimplentes foram classificados incorretamente como inadimplentes (rejeição injusta ou custo de oportunidade de concessão).
@@ -212,6 +214,7 @@ Peso de cada indicador determinado pelo algoritmo:
 <img width="1582" height="855" alt="importancia_variaveis" src="https://github.com/user-attachments/assets/d027aa57-efcb-4f59-8186-ab7af3bacf74" />
 
 > **Análise de Feature Importance (Importância das Variáveis):**
+> 
 > O peso atribuído pelo modelo Random Forest a cada indicador de risco reflete a lógica econômica implementada na simulação:
 > 1.  **Score de Crédito (36,04%):** Lidera como o fator mais determinante para a previsão de default. Historicamente, pontuações de birôs resumem o comportamento de longo prazo do consumidor e servem como âncora de risco.
 > 2.  **Taxa de Utilização do Limite (21,61%):** O segundo indicador de maior peso. No mercado de crédito, clientes que operam no teto do seu limite concedido indicam dependência iminente de rotativo, aumentando drasticamente o risco de default no curto prazo.
