@@ -182,16 +182,19 @@ Resultados consolidados obtidos na base de teste:
 | **ROC-AUC Score** | — | — | **0.8537** |
 
 <img width="1242" height="929" alt="matriz_confusao" src="https://github.com/user-attachments/assets/c22420ce-4657-4401-92b3-cfdab701c31d" />
-> 
+
 > **Análise da Matriz de Confusão:**
 > 
-> A matriz de confusão acima detalha as previsões do modelo no conjunto de teste (375 clientes):
-> *   **Verdadeiros Negativos (Adimplentes Corretos):** O modelo classificou corretamente **249 de 283** clientes adimplentes (Recall de **88%** para a Classe 0). Isso indica que a esteira de crédito do modelo é eficiente para aprovar bons pagadores com segurança.
-> *   **Falsos Positivos (Alarme Falso):** Apenas **34** adimplentes foram classificados incorretamente como inadimplentes (rejeição injusta ou custo de oportunidade de concessão).
-> *   **Verdadeiros Positivos (Inadimplentes Identificados):** O modelo identificou corretamente **40 de 92** inadimplentes reais (Recall de **43%** para a Classe 1) .
-> *   **Falsos Negativos (O Erro mais Caro):** O modelo deixou passar **52** inadimplentes reais como se fossem bons pagadores . 
-> 
-> **Direcionamento de Negócio:** Em risco de crédito, os *Falsos Negivos* representam perdas financeiras diretas (inadimplência na carteira). O atual resultado (Recall de 43% para inadimplentes) mostra que, embora o modelo tenha boa acurácia geral (77%), há espaço para refinar o ponto de corte (*cut-off*) ou aplicar técnicas de balanceamento de classes (como pesos de classe ou SMOTE) para priorizar a captura dessas perdas potenciais.
+> **Análise da Matriz de Confusão:**
+>
+> A matriz de confusão acima detalha o desempenho do modelo no conjunto de teste (375 clientes):
+>
+> * **Verdadeiros Negativos (Adimplentes Corretos):** O modelo classificou corretamente **249 de 283** clientes adimplentes (Recall de **88%** para a Classe 0). Isso indica que a esteira de crédito é eficiente para aprovar bons pagadores com segurança.
+> * **Falsos Positivos:** Apenas **34** adimplentes foram detectados incorretamente como inadimplentes (rejeição injusta ou custo de oportunidade).
+> * **Verdadeiros Positivos (Inadimplentes Identificados):** O modelo acertou corretamente **40 de 92** inadimplentes reais (Recall de **43%** para a Classe 1).
+> * **Falsos Negativos (O Erro mais Caro):** O modelo deixou passar **52** inadimplentes reais como se fossem bons pagadores.
+>
+> **Direcionamento de Negócio:** Em risco de crédito, os *Falsos Negativos* representam perdas financeiras diretas (inadimplência na carteira). O resultado atual (Recall de 43% para inadimplentes) mostra que há espaço para refinar o ponto de corte (*cut-off*) ou aplicar balanceamento de classes para priorizar a captura dessas perdas potenciais.
 
 * **Interpretação da ROC-AUC (0.8537):** O valor superior a 0.85 demonstra excelente capacidade do modelo de distinguir quem paga em dia de quem entra em atraso.
 
