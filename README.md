@@ -20,13 +20,10 @@ credit-default-analytics/
 └── README.md                    # Apresentação executiva
 ```
 
-# **![][image1]**
 
 # 
 
 # **Relatório Técnico: Análise de Risco de Crédito e Inadimplência**
-
-**Projeto:** Credit Risk & Default Analytics
 
 **Repositório:** [Analise-de-Risco-de-Credito](https://github.com/Hellennsouza/Analise-de-Risco-de-Credito)
 
@@ -185,7 +182,6 @@ Resultados consolidados obtidos na base de teste:
 
 > **Análise da Matriz de Confusão:**
 > 
-> **Análise da Matriz de Confusão:**
 >
 > A matriz de confusão acima detalha o desempenho do modelo no conjunto de teste (375 clientes):
 >
