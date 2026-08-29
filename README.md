@@ -194,6 +194,7 @@ Resultados consolidados obtidos na base de teste:
 * **Interpretação da ROC-AUC (0.8537):** O valor superior a 0.85 demonstra excelente capacidade do modelo de distinguir quem paga em dia de quem entra em atraso.
 
 <img width="1277" height="929" alt="curva_roc" src="https://github.com/user-attachments/assets/fbb04700-b284-46ca-93d0-533caa2f95a6" />
+
 > **Análise da Curva ROC-AUC:**
 > A Curva ROC (Receiver Operating Characteristic) mede a capacidade de discriminação do modelo. Com uma métrica de **AUC (Área Sob a Curva) de 0.8537**, o algoritmo Random Forest apresenta um **excelente poder de separabilidade** estatística.
 > *   **O que o AUC representa:** Significa que há **85,37% de probabilidade** de o modelo classificar um cliente inadimplente escolhido aleatoriamente com um score de risco maior do que um cliente adimplente escolhido aleatoriamente.
@@ -209,6 +210,7 @@ Resultados consolidados obtidos na base de teste:
 Peso de cada indicador determinado pelo algoritmo:
 
 <img width="1582" height="855" alt="importancia_variaveis" src="https://github.com/user-attachments/assets/d027aa57-efcb-4f59-8186-ab7af3bacf74" />
+
 > **Análise de Feature Importance (Importância das Variáveis):**
 > O peso atribuído pelo modelo Random Forest a cada indicador de risco reflete a lógica econômica implementada na simulação:
 > 1.  **Score de Crédito (36,04%):** Lidera como o fator mais determinante para a previsão de default. Historicamente, pontuações de birôs resumem o comportamento de longo prazo do consumidor e servem como âncora de risco.
