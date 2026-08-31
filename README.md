@@ -1,5 +1,5 @@
 
-# 📊 Credit Risk & Default Analytics
+# 📊 Análise de Risco de Crédito e Inadimplência
 
 Projeto voltado à previsão de inadimplência e identificação de padrões de risco de crédito, simulando tomadas de decisão para comitês de crédito e recuperação de ativos bancários.
 
